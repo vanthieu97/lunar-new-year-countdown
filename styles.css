@@ -20,7 +20,7 @@
 
 /* Light mode */
 [data-theme="light"] {
-  --bg-dark: #faf8f5;
+  --bg-dark: #ffffff;
   --bg-card: #fff;
   --red-primary: #a01020;
   --red-bright: #c41e3a;
@@ -30,6 +30,24 @@
   --text-muted: #000000;
   --border: rgba(196, 30, 58, 0.2);
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .bg-pattern {
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -15%, rgba(230, 57, 70, 0.08), transparent 45%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(212, 175, 55, 0.05), transparent),
+    radial-gradient(ellipse 90% 60% at 20% 15%, rgba(196, 30, 58, 0.06), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #fafaf8 100%);
+}
+
+/* Light mode moon styling */
+[data-theme="light"] body::before {
+  background: radial-gradient(circle at 35% 35%, rgba(212, 175, 55, 1), rgba(184, 134, 11, 0.7), transparent);
+  box-shadow: 
+    0 0 40px rgba(212, 175, 55, 0.8),
+    0 0 80px rgba(184, 134, 11, 0.5),
+    inset -10px -10px 20px rgba(101, 50, 10, 0.4);
+  filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.6));
 }
 
 *,
@@ -78,7 +96,7 @@ body::before {
   content: '';
   position: fixed;
   top: 5%;
-  right: 10%;
+  right: 2%;
   width: 120px;
   height: 120px;
   background: radial-gradient(circle at 35% 35%, rgba(244, 228, 188, 0.9), rgba(212, 175, 55, 0.4), transparent);
@@ -107,6 +125,41 @@ body::before {
       0 0 100px rgba(212, 175, 55, 0.4),
       inset -10px -10px 20px rgba(139, 69, 19, 0.2);
     filter: drop-shadow(0 0 40px rgba(244, 228, 188, 0.6));
+  }
+}
+
+/* Floating lanterns */
+.lanterns {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2rem;
+}
+
+.lantern {
+  font-size: 3rem;
+  opacity: 0.8;
+  animation: swayLantern 3s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lantern::before {
+  content: '🏮';
+}
+
+@keyframes swayLantern {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(2deg);
   }
 }
 
