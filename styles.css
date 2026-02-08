@@ -105,7 +105,7 @@ body::before {
   content: '';
   position: fixed;
   top: 5%;
-  right: 10%;
+  left: 10%;
   width: 120px;
   height: 120px;
   background: radial-gradient(circle at 35% 35%, rgba(244, 228, 188, 0.9), rgba(212, 175, 55, 0.4), transparent);
