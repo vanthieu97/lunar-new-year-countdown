@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#c41e3a"/>
+      <stop offset="1" stop-color="#8a1220"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)" />
+  <g transform="translate(80,80)">
+    <rect x="0" y="0" width="1040" height="470" rx="36" fill="#fff" opacity="0.04" />
+    <g transform="translate(60,40)">
+      <circle cx="120" cy="120" r="100" fill="#f4e4bc"/>
+      <path d="M120 40c-44 0-74 36-74 80s30 80 74 80 74-36 74-80-30-80-74-80z" fill="#e63946"/>
+      <circle cx="120" cy="120" r="22" fill="#ffd36b"/>
+      <rect x="114" y="230" width="12" height="30" rx="3" fill="#8a2b2b"/>
+    </g>
+    <g transform="translate(320,60)">
+      <text x="0" y="80" font-family="Outfit, Arial, sans-serif" font-size="64" fill="#f4e4bc" font-weight="700">Lunar New Year</text>
+      <text x="0" y="150" font-family="Outfit, Arial, sans-serif" font-size="48" fill="#ffd36b">Countdown</text>
+      <text x="0" y="230" font-family="Noto Serif SC, serif" font-size="28" fill="#fff" opacity="0.85">Interactive country & timezone support</text>
+    </g>
+  </g>
+</svg>
